@@ -1,24 +1,25 @@
 <div class="container">
-  <h2>Upload Image</h2>
-  <form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
-    <div class="mb-3">
-      <label for="imageFile" class="form-label">Choose Image File:</label>
-      <input type="file" id="imageFile" (change)="onFileSelected($event)" class="form-control" required>
-    </div>
-    <div *ngIf="previewImageUrl">
-      <img [src]="previewImageUrl" alt="Selected Image" class="img-fluid mt-3">
-    </div>
-    <div class="mt-3">
-      <button type="submit" class="btn btn-primary">Upload</button>
-    </div>
-  </form>
-
-  <h2 class="mt-5">Uploaded Images</h2>
-  <div class="row">
-    <div *ngFor="let imagePath of imagePaths" class="col-md-3">
-      <div class="card mb-3">
-        <img [src]="imagePath" class="card-img-top" alt="Image">
+    <h2>Upload Image</h2>
+    <form (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="imageFile" class="form-label">Choose Image File:</label>
+        <input type="file" id="imageFile" (change)="onFileSelected($event)" class="form-control" required>
+      </div>
+      <div *ngIf="previewImageUrl">
+        <img [src]="previewImageUrl" alt="Selected Image" class="img-fluid mt-3">
+      </div>
+      <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </div>
+    </form>
+  
+    <h2 class="mt-5">Uploaded Images</h2>
+    <div class="row">
+      <div *ngFor="let imageUrl of imageUrls" class="col-md-3">
+        <div class="card mb-3">
+          <img [src]="imageUrl" class="card-img-top" alt="Image">
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
