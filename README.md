@@ -8,12 +8,16 @@ Acceptance Criteria :
       -Movie Management: Create, read, update, delete (CRUD) movies.
       -Movie Search: Search for movies by title, genre, and release year.
       -Filters: Filter movies by genre and release year.
+
+      
 2. Frontend (Angular):
       -User Interface: Implement a responsive user interface.
       -Authentication: Register, login, logout functionalities.
       -Movie Management: CRUD operations for movies.
       -Movie Search: Interface for searching movies by title, genre, and release year.
       -Filters: Interface for filtering movies by genre and release year.
-3. Integration:
+
+   
+4. Integration:
       -Connect Angular frontend with Django backend using REST APIs.
       -Use JWT for secure communication between frontend and backend.
