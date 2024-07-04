@@ -1,0 +1,55 @@
+<div class="container-fluid movie-management-container justify-content-center">
+  <!-- Back Button -->
+  <div class="row bg-black text-grey p-3">
+    <div class="col d-flex align-items-center">
+      <button class="btn btn-brown me-3" (click)="logout()">Logout</button>
+      <h1 class="d-inline-block mb-0">MOVIE LIST</h1>
+    </div>
+  </div>
+
+  <!-- Search Form -->
+  <div class="row mt-4">
+    <div class="col">
+      <div class="search-form">
+        <form [formGroup]="searchForm">
+          <input 
+            type="text" 
+            formControlName="query" 
+            placeholder="Search movies by title"
+            (input)="onSearchTermChanged(searchForm.value.query)"
+            class="form-control mb-3"
+          >
+          <br>
+          <label class="text-grey">Filter by Genre:</label>
+          <input type="text" formControlName="genre" class="form-control mb-3">
+          <br>
+          <button type="button" (click)="applyFilters()" class="btn btn-dark">Apply Filters</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="error-message text-danger">
+    {{ errorMessage }}
+  </div>
+
+  <!-- No Movies Message -->
+  <div *ngIf="movies.length === 0 && !errorMessage" class="text-grey">
+    <p>No movies available.</p>
+  </div>
+
+  <!-- Movies List -->
+  <div class="row mt-4">
+    <div class="col">
+      <div *ngFor="let movie of movies" class="card movie-card bg-brown-transparent text-grey p-3 mb-3">
+        <h3>{{ movie.movie_name }}</h3>
+        <p>Year of Release: {{ movie.yor }}</p>
+        <p>Language: {{ movie.language }}</p>
+        <p>Genre: {{ movie.genre }}</p>
+        <p>Description: {{ movie.description }}</p>
+        <p>Cast and Crew: {{ movie.cast_and_crew }}</p>
+      </div>
+    </div>
+  </div>
+</div>

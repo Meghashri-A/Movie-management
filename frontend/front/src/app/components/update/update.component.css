@@ -1,0 +1,39 @@
+.bg-image {
+    background-image: url('https://wallpapercave.com/wp/wp13555708.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust height as needed */
+    overflow-y: auto; /* Enable scrolling if content exceeds viewport */
+  }
+  
+  .form-card {
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
+    border: none;
+  }
+  
+  .form-card h2 {
+    color: #ffffff; /* White text color */
+  }
+  
+  .form-card .text-danger {
+    color: #ff0000; /* Red error message text color */
+  }
+  
+  .form-card .form-label {
+    color: #ffffff; /* White label text color */
+  }
+  
+  .form-card .form-control {
+    background-color: transparent; /* Transparent background for form controls */
+    color: #ffffff; /* White text color */
+  }
+  
+  .form-card .btn-black {
+    background-color: #000000; /* Black button background */
+    color: #ffffff; /* White button text color */
+  }
+  
+  .form-card .btn-black:hover {
+    background-color: #333333; /* Darkened background on hover */
+  }
+  

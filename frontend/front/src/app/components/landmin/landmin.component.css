@@ -1,0 +1,49 @@
+/* Add this CSS to your global styles.css or component-specific CSS file */
+.bg-image {
+    background-image: url('https://wallpapercave.com/wp/wp13555708.jpg'); /* Background image URL */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the card */
+  }
+  
+  .custom-btn {
+    color: white; /* White text */
+    font-size: 1.25rem; /* Larger font size */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+  }
+  
+  .custom-btn:hover {
+    transform: scale(1.05); /* Slight zoom-in effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
+  /* Button color variants */
+  .custom-btn.btn-brown {
+    background-color: #8B4513; /* Brown background */
+  }
+  
+  .custom-btn.btn-brown:hover {
+    background-color: #A0522D; /* Lighter brown on hover */
+  }
+  
+  .custom-btn.btn-black {
+    background-color: #000; /* Black background */
+  }
+  
+  .custom-btn.btn-black:hover {
+    background-color: #222; /* Darker black on hover */
+  }
+  
+  .custom-btn.btn-dark {
+    background-color: #343a40; /* Dark background */
+  }
+  
+  .custom-btn.btn-dark:hover {
+    background-color: #495057; /* Slightly lighter dark on hover */
+  }
+  

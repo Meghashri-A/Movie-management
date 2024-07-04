@@ -1,0 +1,42 @@
+<div class="bg-image">
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card form-card bg-black-transparent text-white p-4">
+          <h2 class="text-center mb-4">Edit Movie</h2>
+          <p class="text-danger" *ngIf="errorMessage">{{ errorMessage }}</p>
+          <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="movieName" class="form-label">Movie Name</label>
+              <input type="text" id="movieName" [(ngModel)]="movieName" name="movieName" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="yor" class="form-label">Year of Release</label>
+              <input type="text" id="yor" [(ngModel)]="yor" name="yor" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="language" class="form-label">Language</label>
+              <input type="text" id="language" [(ngModel)]="language" name="language" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="genre" class="form-label">Genre</label>
+              <input type="text" id="genre" [(ngModel)]="genre" name="genre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea id="description" [(ngModel)]="description" name="description" class="form-control" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="castAndCrew" class="form-label">Cast & Crew</label>
+              <textarea id="castAndCrew" [(ngModel)]="castAndCrew" name="castAndCrew" class="form-control" required></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-black" (click)="goBack()">Back</button>
+              <button type="submit" class="btn btn-black">Update Movie</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

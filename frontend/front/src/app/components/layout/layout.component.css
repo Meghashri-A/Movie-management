@@ -1,0 +1,46 @@
+.movie-management-container {
+    background-image: url('https://wallpapercave.com/wp/wp13555708.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size:100vh;
+  }
+  
+  .bg-black {
+    background-color: #000000;
+  }
+  
+  .text-grey {
+    color: #CCCCCC;
+  }
+  
+  .search-form {
+    margin-bottom: 20px;
+  }
+  
+  .form-card {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .movie-card {
+    background-color: rgba(16, 16, 16, 0.7);
+  }
+  
+  .error-message {
+    margin-top: 10px;
+  }
+  
+  .btn-brown {
+    background-color: #8B4513;
+    color: #FFFFFF;
+  }
+  
+  .btn-dark {
+    background-color: #343a40;
+    color: #FFFFFF;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #FFFFFF;
+  }
+  

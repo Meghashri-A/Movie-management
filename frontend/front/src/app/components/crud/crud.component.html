@@ -1,0 +1,39 @@
+<div class="bg-image d-flex align-items-center justify-content-center vh-100" style="background-image: url('https://wallpapercave.com/wp/wp13555708.jpg'); background-size: cover; background-position: center;">
+  <div class="card bg-dark text-white p-5" style="max-width: 800px;">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4">Add Movie</h2>
+      <form (ngSubmit)="onSubmit()" #movieForm="ngForm" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="movie_name">Movie Name</label>
+          <input type="text" id="movie_name" required [(ngModel)]="movieName" name="movie_name" class="form-control" placeholder="Enter movie name" />
+        </div>
+        <div class="form-group">
+          <label for="yor">Year of Release</label>
+          <select id="yor" required [(ngModel)]="yor" name="yor" class="form-control">
+            <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="language">Language</label>
+          <input type="text" id="language" required [(ngModel)]="language" name="language" class="form-control" placeholder="Enter language" />
+        </div>
+        <div class="form-group">
+          <label for="genre">Genre</label>
+          <input type="text" id="genre" required [(ngModel)]="genre" name="genre" class="form-control" placeholder="Enter genre" />
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" required [(ngModel)]="description" name="description" class="form-control" placeholder="Enter description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="cast_and_crew">Cast & Crew</label>
+          <input type="text" id="cast_and_crew" required [(ngModel)]="castAndCrew" name="cast_and_crew" class="form-control" placeholder="Enter cast and crew" />
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-between mt-4">
+          <button type="submit" class="btn btn-lg btn-brown" [disabled]="movieForm.invalid">Add Movie</button>
+          <button type="button" class="btn btn-lg btn-secondary" (click)="onReset()">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

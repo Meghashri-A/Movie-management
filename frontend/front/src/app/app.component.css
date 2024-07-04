@@ -1,0 +1,13 @@
+/* styles.css */
+body {
+    padding-top: 56px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  

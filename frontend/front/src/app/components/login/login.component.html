@@ -1,0 +1,40 @@
+<div class="bg-image d-flex align-items-center justify-content-center vh-100" style="background-image: url('https://wallpapercave.com/wp/wp13555708.jpg'); background-size: cover; background-position: center;">
+  <div class="card bg-dark text-white p-5" style="max-width: 800px;">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4">Login</h2>
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" required minlength="1" [(ngModel)]="username" name="username" class="form-control" placeholder="Enter your username" />
+          <div *ngIf="loginForm.controls['username']?.invalid && (loginForm.controls['username']?.dirty || loginForm.controls['username']?.touched)" class="text-danger">
+            <div *ngIf="loginForm.controls['username']?.errors?.['required']">
+              Username is required.
+            </div>
+            <div *ngIf="loginForm.controls['username']?.errors?.['minlength']">
+              Username must be at least 1 character long.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required minlength="5" [(ngModel)]="password" name="password" class="form-control" placeholder="Enter your password" />
+          <div *ngIf="loginForm.controls['password']?.invalid && (loginForm.controls['password']?.dirty || loginForm.controls['password']?.touched)" class="text-danger">
+            <div *ngIf="loginForm.controls['password']?.errors?.['required']">
+              Password is required.
+            </div>
+            <div *ngIf="loginForm.controls['password']?.errors?.['minlength']">
+              Password must be at least 5 characters long.
+            </div>
+          </div>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-between">
+          <button type="submit" class="btn btn-lg btn-primary" [disabled]="loginForm.invalid">Login</button>
+          <button type="button" class="btn btn-lg btn-secondary" (click)="onReset()">Reset</button>
+        </div>
+      </form>
+      <div *ngIf="errorMessage" class="error-message mt-3 text-danger text-center">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </div>
+</div>
