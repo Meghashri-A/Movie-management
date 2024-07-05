@@ -11,25 +11,13 @@ import { CommonModule } from '@angular/common';
   templateUrl: './landmin.component.html',
   styleUrl: './landmin.component.css'
 })
-export class LandminComponent implements OnInit {
+export class LandminComponent {
   constructor(
     private apiService: ApiService,
-    private router: Router
-  ) {}
-
-  ngOnInit(): void {
-    this.apiService.isAuthenticated().subscribe(
-      (response) => {
-        if (!response.authenticated || response.username !== 'admin') {
-          this.router.navigateByUrl('login');
-        }
-      },
-      (error) => {
-        console.error('Authentication check failed', error);
-        this.router.navigateByUrl('login');
-      }
-    );
-  }
+    private router:Router){
+      
+    }
+  
   
   create():void{
     this.router.navigateByUrl('crud');
