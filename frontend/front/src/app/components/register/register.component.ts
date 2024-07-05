@@ -1,5 +1,3 @@
-// register.component.ts
-
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
