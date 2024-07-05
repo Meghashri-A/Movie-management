@@ -38,7 +38,7 @@ export class PictureComponent implements OnInit {
       this.apiService.uploadImage(this.selectedFile).subscribe(
         (response) => {
           console.log('Image uploaded successfully', response);
-          this.loadImageUrls(); // Reload image URLs after successful upload
+          this.loadImageUrls(); 
         },
         (error) => {
           console.error('Error uploading image', error);
