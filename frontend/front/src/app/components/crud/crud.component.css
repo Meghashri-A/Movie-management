@@ -9,12 +9,12 @@
   }
   
   .btn-brown {
-    background-color: #A52A2A; /* Brown color */
+    background-color: #A52A2A; 
     color: white;
   }
   
   .btn-brown:hover {
-    background-color: #8B4513; /* Darker brown on hover */
+    background-color: #8B4513; 
   }
   
   .form-control {
@@ -24,7 +24,7 @@
   
   .form-control:focus {
     background-color: #fff;
-    border-color: #A52A2A; /* Brown border color on focus */
+    border-color: #A52A2A; 
     box-shadow: 0 0 0 0.2rem rgba(165, 42, 42, 0.25);
   }
   
